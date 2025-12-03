@@ -52,6 +52,14 @@ Adjacency matrix (adj_mx.pkl) encodes the directed highway sensor network as:
   - `sensor_ids`: list of sensor identifiers,
   - `sensor_id_to_ind`: mapping from sensor ID to node index,
   - `adj_mx`: a 207 × 207 adjacency matrix of edge weights.
+
+A visualization of nodes-sensors and roads between them, where the edge thickness reflects the strength/weight of the connection:
+
+![sensors_and_roads]()
+
+A traffic speed hratmap:
+
+![traffic_speed_heatmap]()
   
 ### Graph construction
   - From `adj_mx`, edges are extracted where the weight is positive (`adj > 0`), producing `edge_index` (pairs of node indices) and `edge_attr` (edge weights).
@@ -82,6 +90,10 @@ Overall architecture is:
     - Root Mean Squared Error (RMSE),
     - Coefficient of determination (R²),
     - Mean Absolute Percentage Error (MAPE, in %).
+
+  ![train_val_loss]()
+
+  ![train_metrics]()
 
 ## Results
 
