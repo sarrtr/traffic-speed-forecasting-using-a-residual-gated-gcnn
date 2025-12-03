@@ -55,11 +55,11 @@ Adjacency matrix (adj_mx.pkl) encodes the directed highway sensor network as:
 
 A visualization of nodes-sensors and roads between them, where the edge thickness reflects the strength/weight of the connection:
 
-![sensors_and_roads]()
+![sensors_and_roads](https://github.com/sarrtr/traffic-speed-forecasting-using-a-residual-gated-gcnn/blob/main/assets/traffic_sensor_graph.png?raw=true)
 
 A traffic speed hratmap:
 
-![traffic_speed_heatmap]()
+![traffic_speed_heatmap](https://github.com/sarrtr/traffic-speed-forecasting-using-a-residual-gated-gcnn/blob/main/assets/traffis_speed_heatmap.png?raw=true)
   
 ### Graph construction
   - From `adj_mx`, edges are extracted where the weight is positive (`adj > 0`), producing `edge_index` (pairs of node indices) and `edge_attr` (edge weights).
@@ -74,7 +74,7 @@ Overall architecture is:
 2. Two stacked residual gated graph convolution blocks with layer normalization and dropout.
 3. Linear projection to multi‑horizon speed predictions for every sensor.
 
-![model_architecture]()
+![model_architecture](https://github.com/sarrtr/traffic-speed-forecasting-using-a-residual-gated-gcnn/blob/main/assets/model_arch.png?raw=true)
 
 ### Training Process
 
@@ -91,9 +91,9 @@ Overall architecture is:
     - Coefficient of determination (R²),
     - Mean Absolute Percentage Error (MAPE, in %).
 
-  ![train_val_loss]()
+  ![train_val_loss](https://github.com/sarrtr/traffic-speed-forecasting-using-a-residual-gated-gcnn/blob/main/assets/train_val_loss.png?raw=true)
 
-  ![train_metrics]()
+  ![train_metrics](https://github.com/sarrtr/traffic-speed-forecasting-using-a-residual-gated-gcnn/blob/main/assets/train_metrics.png?raw=true)
 
 ## Results
 
