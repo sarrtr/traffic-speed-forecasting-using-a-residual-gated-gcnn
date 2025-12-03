@@ -131,9 +131,11 @@ Beyond this specific application, the methodology illustrates a general approach
 1. Xavier Bresson, Thomas Laurent, "Residual Gated Graph ConvNets", November 2017.
 
 Link: https://arxiv.org/abs/1711.07553
+
 2. Official PyTorch Geometric implementation of 'ResGatedGraphConv`.
 
 Link: https://pytorch-geometric.readthedocs.io/en/2.6.1/_modules/torch_geometric/nn/conv/res_gated_graph_conv.html#ResGatedGraphConv
+
 3. GitHub repository of Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting with METR‑LA traffic dataset.
 
 Link: https://drive.google.com/drive/folders/10FOTa6HXPqX8Pf5WRoRwcFnW9BrNZEIX
