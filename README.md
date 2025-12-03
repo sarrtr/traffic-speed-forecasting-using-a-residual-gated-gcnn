@@ -46,7 +46,7 @@ with $\sigma$ the sigmoid function. The gates are element-wise (i.e., they have 
 
 ### Dataset
 
-[ METR‑LA traffic dataset](https://drive.google.com/drive/folders/10FOTa6HXPqX8Pf5WRoRwcFnW9BrNZEIX) (`metr-la.h5`) containing traffic speeds (miles/hour) for 207 sensors over approximately four months (March–June 2012), sampled every 5 minutes.
+METR‑LA traffic dataset (`metr-la.h5`) containing traffic speeds (miles/hour) for 207 sensors over approximately four months (March–June 2012), sampled every 5 minutes.
 
 Adjacency matrix (adj_mx.pkl) encodes the directed highway sensor network as:
   - `sensor_ids`: list of sensor identifiers,
@@ -125,3 +125,12 @@ There are, however, several limitations and potential improvements. First, the m
 This project implements and evaluates a Residual Gated Graph Convolutional Neural Network for multi‑horizon traffic speed forecasting on the METR‑LA highway sensor network. By modeling both temporal history and spatial interactions on the road graph, the approach achieves strong predictive performance, particularly for short‑term horizons, with R² above 0.84 at 5 minutes and above 0.77 at 15 minutes. The results support the hypothesis that gated message passing with residual connections is a powerful inductive bias for spatio‑temporal forecasting on transportation networks.
 
 Beyond this specific application, the methodology illustrates a general approach for constructing graph‑based forecasting models: build a graph from domain structure, encode temporal context in node features, and apply residual gated graph convolutions to propagate information. Future work could extend this framework by incorporating more expressive temporal modules, dynamic adjacency learning and richer exogenous features (such as weather, calendar events or incident reports), as well as by benchmarking against a wider range of baselines and datasets.
+
+## References
+
+1. Xavier Bresson, Thomas Laurent, "Residual Gated Graph ConvNets", November 2017. 
+Link: https://arxiv.org/abs/1711.07553
+2. Official PyTorch Geometric implementation of 'ResGatedGraphConv`.
+Link: https://pytorch-geometric.readthedocs.io/en/2.6.1/_modules/torch_geometric/nn/conv/res_gated_graph_conv.html#ResGatedGraphConv
+3. GitHub repository of Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting with METR‑LA traffic dataset.
+Link: https://drive.google.com/drive/folders/10FOTa6HXPqX8Pf5WRoRwcFnW9BrNZEIX
